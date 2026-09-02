@@ -3,658 +3,631 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>MD SAZID HOSSAIN - Portfolio</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <!-- Set before anything renders, so a returning visitor's dark-mode
+       choice applies with no flash of the light theme. -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>MD. Sazid Hossain — Software Engineer</title>
+  <meta name="description" content="Computer Science and Engineering student at the University of Asia Pacific, building full-stack applications with machine learning and deep learning at the core.">
+  <meta name="author" content="MD. Sazid Hossain">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <meta property="og:title" content="MD. Sazid Hossain ">
+  <meta property="og:description" content="Full-stack applications with machine learning and deep learning at the core.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/my-profile-img.jpg">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
 
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Scroll reveals only hide content when JS is around to bring it back. -->
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 
-<body class="index-page">
+<body id="top">
 
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+  <a class="skip" href="#main">Skip to content</a>
 
-    <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
-    </div>
+  <!-- Navigation -->
+  <header class="nav" data-open="false">
+    <div class="shell nav__inner">
+      <a class="nav__mark" href="#top">SAZID<span>.</span></a>
 
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">MD SAZID HOSSAIN</h1>
-    </a>
-
-    <div class="social-links text-center">
-      <a href="https://www.facebook.com/sazid.hossain.923171" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="https://github.com/MD-SAZID-HOSSAIN" target="_blank" class="github"><i class="bi bi-github"></i></a>
-      <a href="https://www.linkedin.com/in/md-sazid-hossain-905543372/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
-    </div>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#projects"><i class="bi bi-briefcase navicon"></i> Projects</a></li>
-        <li><a href="#hobbies"><i class="bi bi-person navicon"></i> Hobbies</a></li>
-        <li><a href="#testimonials"><i class="bi bi-person navicon"></i> Friends</a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
-      </ul>
-    </nav>
-
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
-
-      <!-- Theme Color Selector -->
-      <div class="theme-selector" data-aos="fade-left">
-        <button class="theme-toggle">
-          <i class="bi bi-palette"></i>
+      <div class="nav__controls">
+        <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="true">
+          <svg class="icon-sun" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="10" cy="10" r="3.6"/>
+            <path d="M10 1.8v2M10 16.2v2M18.2 10h-2M3.8 10h-2M15.6 4.4l-1.4 1.4M5.8 14.2l-1.4 1.4M15.6 15.6l-1.4-1.4M5.8 5.8 4.4 4.4"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M17 11.5A7 7 0 1 1 8.5 3a5.5 5.5 0 0 0 8.5 8.5Z"/>
+          </svg>
         </button>
-        <div class="theme-colors">
-          <button class="color-btn" data-color="#ffffff" style="background-color: #ffffff; border: 1px solid #ddd;"></button>
-          <button class="color-btn" data-color="#149ddd" style="background-color: #149ddd;"></button>
-          <button class="color-btn" data-color="#e44d26" style="background-color: #e44d26;"></button>
-          <button class="color-btn" data-color="#4CAF50" style="background-color: #4CAF50;"></button>
-          <button class="color-btn" data-color="#9C27B0" style="background-color: #9C27B0;"></button>
-          <button class="color-btn" data-color="#FF9800" style="background-color: #FF9800;"></button>
-        </div>
+
+        <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <i aria-hidden="true"></i>
+        </button>
       </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>MD SAZID HOSSAIN</h2>
-        <p>I'm a <span class="typed" data-typed-items="Software Engineer">Software Engineer</span></p>
-        <p class="mt-2 fs-4 text-light" style="opacity: 0.9;">Building full-stack apps with machine learning and deep learning at the core.</p>
+      <nav id="nav-links" class="nav__links" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
+        <a href="#background">Background</a>
+        <a href="#achievements">Achievements</a>
+        <!-- <a href="#beyond">Beyond code</a> -->
+        <a href="#friends">Friends</a>
+        <a class="btn btn--solid" href="#contact">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero">
+      <canvas class="hero__particles" aria-hidden="true"></canvas>
+      <div class="shell">
+        <div class="hero__grid">
+          <div class="hero__copy">
+            <h1 class="hero__name reveal" data-delay="80">
+              Md Sazid
+              <em>Hossain</em>
+            </h1>
+
+            <p class="hero__role reveal" data-delay="120">
+              <span class="hero__role-text" id="heroRole"></span><span class="hero__cursor" aria-hidden="true"></span>
+            </p>
+
+            <p class="hero__lede reveal" data-delay="160">
+              I build full-stack applications with machine learning at the core — from Django
+              backends to the vision models running behind them.
+            </p>
+
+            <div class="hero__actions reveal" data-delay="240">
+              <a class="btn btn--solid" href="#work">See the work</a>
+              <a class="btn btn--ghost" href="https://github.com/MD-SAZID-HOSSAIN" target="_blank" rel="noopener">
+                <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                GitHub
+              </a>
+              <a class="btn btn--ghost" href="https://www.linkedin.com/in/md-sazid-hossain-905543372/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 1.15C0 .52.53 0 1.18 0h13.64C15.47 0 16 .52 16 1.15v13.7c0 .63-.53 1.15-1.18 1.15H1.18C.53 16 0 15.48 0 14.85V1.15Zm4.94 12.26V6.17H2.54v7.24h2.4Zm-1.2-8.23c.84 0 1.36-.55 1.36-1.24-.02-.71-.52-1.25-1.34-1.25-.82 0-1.36.54-1.36 1.25 0 .69.52 1.24 1.32 1.24h.02Zm4.42 8.23V9.37c0-.22.02-.43.08-.59.17-.43.56-.88 1.22-.88.86 0 1.2.66 1.2 1.62v3.89h2.4V9.24c0-2.22-1.18-3.25-2.76-3.25-1.29 0-1.86.71-2.18 1.2v.03h-.02l.02-.03V6.17h-2.4c.03.68 0 7.24 0 7.24h2.4Z"/></svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__portrait reveal" data-delay="120">
+            <img src="assets/img/my-profile-img.jpg" alt="Portrait of Md. Sazid Hossain" width="320" height="400">
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow">About</p>
+          <h2>A student engineer who <span class="accent">ships</span> what he trains</h2>
+        </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>Hey there!My name's Sazid Hossain. I'm a Computer Science and Engineering student at the University of Asia Pacific, building software with a focus on machine learning and deep learning. I like working across the full stack, from Django backends to the models that power them, and I'm always looking to pick up new tools and get better at the ones I already use.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="">
+        <div class="about__grid">
+          <div class="about__body reveal">
+            <p>
+              I'm a Computer Science and Engineering student at the University of Asia Pacific,
+              building software with a focus on machine learning and deep learning. I like working
+              across the full stack — from Django backends to the models that power them.
+            </p>
+            <p>
+              Most of my projects start as a research question and end as something you can actually
+              use: a food classifier that became a calorie estimator inside a health platform, a
+              segmentation model tested against a second dataset to see where it breaks. I'm always
+              picking up new tools and getting better at the ones I already use.
+            </p>
+            <p>
+              Outside coursework I take part in CTF competitions where I work mostly on cryptography challenges.
+            </p>
           </div>
-          <div class="col-lg-8 content">
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>25.11.2002</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>01752949254</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Dhaka, Bangladesh</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor's (In Progress)</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>mdsazidhossain27@gmail.com</span></li>
-                </ul>
-              </div>
+
+          <ul class="facts reveal" data-delay="120">
+            <li><span class="k">Location</span><span class="v">Dhaka, Bangladesh</span></li>
+            <li><span class="k">Degree</span><span class="v">BSc CSE, in progress</span></li>
+            <li><span class="k">University</span><span class="v">University of Asia Pacific</span></li>
+            <li><span class="k">Email</span><a class="v" href="mailto:mdsazidhossain27@gmail.com">mdsazidhossain27@gmail.com</a></li>
+            <li><span class="k">Phone</span><a class="v" href="tel:+8801752949254">+880 1752 949254</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section section--mist">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow">Skills</p>
+          <h2>What I <span class="accent">build</span> with</h2>
+          <p>The tools I reach for first, grouped by where they sit in a project.</p>
+        </div>
+
+        <div class="skills__grid">
+          <div class="skill reveal">
+            <h3>Languages</h3>
+            <p class="skill__note">core programming</p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">C</span>
+              <span class="tag">Java</span>
+              <span class="tag">SQL</span>
             </div>
-            <p class="py-3">
-              A CSE student building full-stack applications
+          </div>
+
+          <div class="skill reveal" data-delay="100">
+            <h3>Web &amp; frameworks</h3>
+            <p class="skill__note">backends and interfaces</p>
+            <div class="tags">
+              <span class="tag">Django</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+
+          <div class="skill reveal" data-delay="200">
+            <h3>ML, data &amp; tools</h3>
+            <p class="skill__note">training and everything around it</p>
+            <div class="tags">
+              <span class="tag">PyTorch</span>
+              <span class="tag">Hugging Face</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">Git</span>
+              <span class="tag">Photoshop</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="section">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2><span class="accent">Projects</span> that I worked on</h2>
+          <p>Where a project was measured, the numbers are here. Where it wasn't, they aren't.</p>
+        </div>
+
+        <div class="projects__grid">
+
+          <article class="project reveal">
+            <h3>Smart Health Companion</h3>
+            <p class="project__stack">Python · Django · PyTorch · REST APIs</p>
+            <p class="project__desc">
+              A full-stack health-tracking platform covering daily activity logging through to
+              AI-driven diet planning. A custom EfficientNet-B0 classifier trained on Bangladeshi
+              and Indian dishes estimates calories from food photos. Also integrates a third-party
+              AI API for personalized diet plans and a doctor-finder feature.
+            </p>
+            <ul class="logline">
+              <li><span class="k">role</span><span class="v">full stack + model</span></li>
+              <li><span class="k">backbone</span><span class="v">EfficientNet-B0</span></li>
+            </ul>
+            <a class="link" href="https://github.com/MD-SAZID-HOSSAIN/Smart-Health-Companion" target="_blank" rel="noopener">
+              View code
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h7v7M13 3 3.5 12.5"/></svg>
+            </a>
+          </article>
+
+          <article class="project reveal" data-delay="80">
+            <h3>Bangladeshi Food Classifier</h3>
+            <p class="project__stack">Python · PyTorch · EfficientNet-B0</p>
+            <p class="project__desc">
+              The vision model behind Smart Health Companion's calorie feature. Fine-tuned an
+              EfficientNet-B0 on a custom merged dataset of Indian and Bangladeshi dishes,
+              handling visually distinct dishes well and confusing the ones that look alike.
+            </p>
+            <ul class="logline">
+              <li><span class="k">val_acc</span><span class="v">77.7%</span></li>
+              <li><span class="k">classes</span><span class="v">16</span></li>
+            </ul>
+            <a class="link" href="https://www.kaggle.com/code/sazidhossain27/bangladeshi-food-classifier" target="_blank" rel="noopener">
+              View on Kaggle
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h7v7M13 3 3.5 12.5"/></svg>
+            </a>
+          </article>
+
+          <article class="project reveal" data-delay="160">
+            <h3>Brain Tumor Segmentation</h3>
+            <p class="project__stack">Python · PyTorch · U-Net · ResNet-34</p>
+            <p class="project__desc">
+              A U-Net trained to segment brain tumors from FLAIR MRI slices, then evaluated on a
+              separate Figshare dataset to measure how far it generalizes. Includes a failure
+              analysis of the domain shift between MRI scan types.
+            </p>
+            <ul class="logline">
+              <li><span class="k">val_dice</span><span class="v">0.918</span></li>
+              <li><span class="k">cross_dataset</span><span class="v">Figshare</span></li>
+            </ul>
+            <a class="link" href="https://www.kaggle.com/code/sazidhossain27/brain-tumors" target="_blank" rel="noopener">
+              View on Kaggle
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h7v7M13 3 3.5 12.5"/></svg>
+            </a>
+          </article>
+
+          <article class="project reveal" data-delay="240">
+            <h3>Zero-Shot Image Classification</h3>
+            <p class="project__stack">Python · PyTorch · Hugging Face (CLIP)</p>
+            <p class="project__desc">
+              A benchmark pitting OpenAI's zero-shot CLIP against a conventionally fine-tuned
+              ResNet18. Covers prompt engineering and looks at when a model trained on general web
+              imagery beats a supervised model on a specific domain.
+            </p>
+            <ul class="logline">
+              <li><span class="k">datasets</span><span class="v">3</span></li>
+              <li><span class="k">baseline</span><span class="v">ResNet18</span></li>
+            </ul>
+            <a class="link" href="https://www.kaggle.com/code/sazidhossain27/zero-shot-image-classification-with-clip" target="_blank" rel="noopener">
+              View on Kaggle
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h7v7M13 3 3.5 12.5"/></svg>
+            </a>
+          </article>
+
+          <article class="project reveal" data-delay="320">
+            <h3>Homemade Cake Bakery</h3>
+            <p class="project__stack">Python · Django · SQLite · Pillow</p>
+            <p class="project__desc">
+              A production-style Django site for a home bakery business, with custom models for
+              cakes, categories, reviews and gift boxes, an interactive menu gallery, and a working
+              admin dashboard the owner runs the shop from.
+            </p>
+            <div class="project__links">
+              <a class="link link--live" href="https://website-for-my-bakery.onrender.com/" target="_blank" rel="noopener">
+                Live site
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h7v7M13 3 3.5 12.5"/></svg>
+              </a>
+              <a class="link" href="https://github.com/MD-SAZID-HOSSAIN/website-for-my-bakery" target="_blank" rel="noopener">
+                View code
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h7v7M13 3 3.5 12.5"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="project reveal" data-delay="400">
+            <h3>Cyber Security Club UAP</h3>
+            <p class="project__stack">Python · Django · HTML · CSS</p>
+            <p class="project__desc">
+              The official website for the Cyber Security Club at CSE, University of Asia Pacific.
+              Built to get club activities, announcements and resources in front of students
+              without anyone having to touch the code to publish.
+            </p>
+            <a class="link" href="https://github.com/MD-SAZID-HOSSAIN/CyberSecuritysite" target="_blank" rel="noopener">
+              View code
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h7v7M13 3 3.5 12.5"/></svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Background -->
+    <section id="background" class="section section--mist">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow">Background</p>
+          <h2><span class="accent">Experience</span> and education</h2>
+        </div>
+
+        <div class="resume__grid">
+
+          <div class="resume__col reveal">
+            <h3>Experience</h3>
+
+            <div class="entry">
+              <h4>Group projects</h4>
+              <p class="entry__meta">Academic &amp; extracurricular · <b>UAP</b></p>
+              <ul>
+                <li>Designed and built academic and club projects in C, Java and SQL, from initial design through delivery.</li>
+                <li>Collaborated in cross-functional teams to develop database systems, web applications and security tooling.</li>
+              </ul>
+            </div>
+
+            <div class="entry">
+              <h4>Cybersecurity &amp; CTF</h4>
+              <p class="entry__meta">Cyber Security Club, CSE UAP</p>
+              <ul>
+                <li>Competed in Capture the Flag (CTF) competitions, strengthening analytical thinking and structured problem-solving under time pressure.</li>
+                <li>Specialized in cryptography challenges, developing a practical understanding of encryption schemes and cryptanalysis techniques.</li>
+              </ul>
+            </div>
+
+            <div class="entry">
+              <h4>Volunteering &amp; university events</h4>
+              <p class="entry__meta"><b>2024 — 2025</b></p>
+              <ul>
+                <li>Volunteered in the organization and execution of university competitions and events.</li>
+                <li>Facilitated technical workshops and cybersecurity sessions, mentoring peers through challenging topics.</li>
+                <li>Served on the Media &amp; Publications team for the Cyber Security Club, supporting content and outreach efforts.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="resume__col reveal" data-delay="120">
+            <h3>Education</h3>
+
+            <div class="entry">
+              <h4>BSc in Computer Science &amp; Engineering</h4>
+              <p class="entry__meta">University of Asia Pacific · <b>present</b></p>
+            </div>
+
+            <div class="entry">
+              <h4>Higher Secondary Certificate</h4>
+              <p class="entry__meta">Mohammadpur Govt College · <b>2021</b></p>
+            </div>
+
+            <div class="entry">
+              <h4>Secondary School Certificate</h4>
+              <p class="entry__meta">Mohammadpur Govt High School · <b>2019</b></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="section">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow">Achievements</p>
+          <h2>Credentials I've <span class="accent">earned</span></h2>
+        </div>
+
+        <div class="achievements__grid">
+          <div class="achievement reveal">
+            <svg class="achievement__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M5.5 1.5h6l3 3v12.5a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1V2.5a1 1 0 0 1 1-1Z" stroke-linejoin="round"/>
+              <path d="M11.5 1.5v3h3M7 9.5h6M7 12.5h6M7 15.5h4" stroke-linecap="round"/>
+            </svg>
+            <h3>First Author, Two IEEE Conference Papers</h3>
+            <p class="achievement__meta">IEEE Xplore</p>
+            <p class="achievement__desc">
+              First-authored two IEEE conference papers, contributing to research,
+              experimentation, technical writing, and manuscript development.
+            </p>
+          </div>
+
+          <div class="achievement reveal" data-delay="80">
+            <svg class="achievement__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M10 1.5 12.35 6.4l5.4.79-3.9 3.8.92 5.38L10 13.8l-4.77 2.57.92-5.38-3.9-3.8 5.4-.79L10 1.5Z" stroke-linejoin="round"/>
+            </svg>
+            <h3>Databases, Open Studies Program</h3>
+            <p class="achievement__meta">Jamk University of Applied Sciences · Finland</p>
+            <p class="achievement__desc">
+              Completed a databases course through Jamk University of Applied Sciences' Open
+              Studies Program in Finland, alongside group project work back home.
+            </p>
+          </div>
+
+          <div class="achievement reveal" data-delay="160">
+            <svg class="achievement__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M10 1.5 12.35 6.4l5.4.79-3.9 3.8.92 5.38L10 13.8l-4.77 2.57.92-5.38-3.9-3.8 5.4-.79L10 1.5Z" stroke-linejoin="round"/>
+            </svg>
+            <h3>Basic CTF Workshop</h3>
+            <p class="achievement__meta">Cyber Security Club, CSE UAP · Apr 2023</p>
+            <p class="achievement__desc">
+              Certified for completing the Basic CTF Workshop, issued by the Cyber Security Club,
+              CSE UAP.
             </p>
           </div>
         </div>
-
       </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section light-background">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Skills</h2>
-            <p>Technical Proficiencies & Expertise</p>
-        </div>
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="row gy-4 justify-content-center">
-                
-                <!-- Programming Languages -->
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="card w-100 shadow-sm border-0 text-center p-4 skill-card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.classList.replace('shadow-sm', 'shadow');" onmouseout="this.style.transform='translateY(0)'; this.classList.replace('shadow', 'shadow-sm');">
-                        <div class="icon mb-4 mt-2">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-subtle rounded-circle" style="width: 80px; height: 80px;">
-                                <i class="bi bi-code-square text-primary" style="font-size: 2rem;"></i>
-                            </div>
-                        </div>
-                        <h4 class="fw-bold mb-4" style="font-size: 1.25rem; color: #2c3e50;">Languages</h4>
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill fw-medium">Python</span>
-                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill fw-medium">C</span>
-                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill fw-medium">Java</span>
-                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill fw-medium">SQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Web & Frameworks -->
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="card w-100 shadow-sm border-0 text-center p-4 skill-card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.classList.replace('shadow-sm', 'shadow');" onmouseout="this.style.transform='translateY(0)'; this.classList.replace('shadow', 'shadow-sm');">
-                        <div class="icon mb-4 mt-2">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-subtle rounded-circle" style="width: 80px; height: 80px;">
-                                <i class="bi bi-laptop text-primary" style="font-size: 2rem;"></i>
-                            </div>
-                        </div>
-                        <h4 class="fw-bold mb-4" style="font-size: 1.25rem; color: #2c3e50;">Web & Frameworks</h4>
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill fw-medium">Django</span>
-                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill fw-medium">REST APIs</span>
-                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill fw-medium">HTML/CSS</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI, Data & Tools -->
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="card w-100 shadow-sm border-0 text-center p-4 skill-card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.classList.replace('shadow-sm', 'shadow');" onmouseout="this.style.transform='translateY(0)'; this.classList.replace('shadow', 'shadow-sm');">
-                        <div class="icon mb-4 mt-2">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-subtle rounded-circle" style="width: 80px; height: 80px;">
-                                <i class="bi bi-cpu text-primary" style="font-size: 2rem;"></i>
-                            </div>
-                        </div>
-                        <h4 class="fw-bold mb-4" style="font-size: 1.25rem; color: #2c3e50;">AI, Data & Tools</h4>
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill fw-medium">PyTorch</span>
-                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill fw-medium">SQLite</span>
-                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill fw-medium">Git</span>
-                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill fw-medium">Photoshop</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
     </section>
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p>My professional experience includes:</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title mb-4">Experience</h3>
-            
-            <div class="resume-item">
-                <h4 class="text-primary mb-3">Group Projects (Academic & Extracurricular)</h4>
-                <ul class="list-unstyled">
-                    <li class="mb-2 d-flex align-items-start"><i class="bi bi-check2-circle text-primary me-2 mt-1"></i> <span>Worked on C, Java, and SQL projects across academic coursework and extracurricular initiatives.</span></li>
-                    <li class="mb-2 d-flex align-items-start"><i class="bi bi-check2-circle text-primary me-2 mt-1"></i> <span>Collaborated with teams to build database systems, web applications, and security solutions.</span></li>
-                    <li class="mb-2 d-flex align-items-start"><i class="bi bi-check2-circle text-primary me-2 mt-1"></i> <span>Completed a databases course through Jamk University of Applied Sciences' Open Studies Program in Finland, working alongside the group project work back home.</span></li>
-                </ul>
-            </div>
-
-            <div class="resume-item">
-                <h4 class="text-primary mb-3">Cybersecurity & CTF Participation</h4>
-                <ul class="list-unstyled">
-                    <li class="mb-2 d-flex align-items-start"><i class="bi bi-check2-circle text-primary me-2 mt-1"></i> <span>Took part in CTF challenges, which pushed my problem-solving and analytical skills.</span></li>
-                    <li class="mb-2 d-flex align-items-start"><i class="bi bi-check2-circle text-primary me-2 mt-1"></i> <span>Worked through cryptography challenges, building up my grasp of encryption and security concepts.</span></li>
-                    <li class="mb-2 d-flex align-items-start"><i class="bi bi-check2-circle text-primary me-2 mt-1"></i> <span>Completed a Basic CTF Workshop through the Cyber Security Club at CSE, UAP.</span></li>
-                </ul>
-            </div>
-
-            <div class="resume-item">
-                <h4 class="text-primary mb-3">Volunteering & University Events</h4>
-                <h5 class="badge bg-primary-subtle text-primary rounded-pill mb-3 px-3 py-2">2024 - 2025</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2 d-flex align-items-start"><i class="bi bi-check2-circle text-primary me-2 mt-1"></i> <span>Volunteered at university competitions and events.</span></li>
-                    <li class="mb-2 d-flex align-items-start"><i class="bi bi-check2-circle text-primary me-2 mt-1"></i> <span>Helped run tech workshops and cybersecurity sessions, walking peers through topics they were stuck on.</span></li>
-                    <li class="mb-2 d-flex align-items-start"><i class="bi bi-check2-circle text-primary me-2 mt-1"></i> <span>Served on the Media & Publications team for the Cyber Security Club, CSE UAP.</span></li>
-                </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title mb-4">Education</h3>
-            
-            <div class="resume-item">
-              <h4 class="text-primary mb-2">Bachelor of Science in Computer Science & Engineering</h4>
-              <h5 class="badge bg-primary text-white rounded-pill mb-3 px-3 py-2">Present</h5>
-              <p class="mb-0"><i class="bi bi-building me-2 text-secondary"></i><strong>University of Asia Pacific</strong></p>
-            </div>
-            
-            <div class="resume-item">
-              <h4 class="text-primary mb-2">Higher Secondary Certificate (HSC)</h4>
-              <h5 class="badge bg-light text-dark border rounded-pill mb-3 px-3 py-2">2021</h5>
-              <p class="mb-0"><i class="bi bi-building me-2 text-secondary"></i><strong>Mohammadpur Govt College</strong></p>
-            </div>
-            
-            <div class="resume-item">
-              <h4 class="text-primary mb-2">Secondary School Certificate (SSC)</h4>
-              <h5 class="badge bg-light text-dark border rounded-pill mb-3 px-3 py-2">2019</h5>
-              <p class="mb-0"><i class="bi bi-building me-2 text-secondary"></i><strong>Mohammadpur Govt High School</strong></p>
-            </div>
-          </div>
-
+    <!-- Beyond code
+    <section id="beyond" class="section">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow">Beyond code</p>
+          <h2>What I do with the rest of my time</h2>
         </div>
 
+        <div class="hobbies__grid">
+          <figure class="hobby reveal">
+            <img src="assets/img/testimonials/asgame.png" alt="Assassin's Creed game artwork" loading="lazy">
+            <figcaption>Gaming</figcaption>
+          </figure>
+
+          <figure class="hobby reveal" data-delay="90">
+            <img src="assets/img/testimonials/horrormovie2.jpg" alt="Still from The Conjuring" loading="lazy">
+            <figcaption>Horror films</figcaption>
+          </figure>
+
+          <figure class="hobby reveal" data-delay="180">
+            <img src="assets/img/testimonials/traveling.jpg" alt="Traveling" loading="lazy">
+            <figcaption>Traveling</figcaption>
+          </figure>
+
+          <figure class="hobby reveal" data-delay="270">
+            <img src="assets/img/testimonials/upmovie.jpeg" alt="Still from the film Up" loading="lazy">
+            <figcaption>Animation</figcaption>
+          </figure>
+        </div>
       </div>
+    </section>
+    -->
 
-    </section><!-- /Resume Section -->
+    <!-- Friends -->
+    <section id="friends" class="section section--mist">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow">Friends</p>
+          <h2>The people I build <span class="accent">alongside</span></h2>
+          <p>Classmates and teammates from CSE at the University of Asia Pacific.</p>
+        </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects section light-background">
+        <div class="friends__grid">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Projects</h2>
-        <p>Some of my recent works and learning projects</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-
-          <!-- Project 1 -->
-          <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card w-100 shadow-sm border-0">
-              <div class="card-body d-flex flex-column p-4">
-                <h3 class="card-title mb-3 fw-bold" style="font-size: 1.25rem;">Smart Health Companion</h3>
-                <h6 class="card-subtitle mb-3 text-primary">Python, Django, PyTorch, REST APIs</h6>
-                <p class="card-text flex-grow-1" style="font-size: 0.95rem;">A full-stack health-tracking platform covering daily activity logging to AI-driven diet planning. Features a custom EfficientNet-B0 classifier trained on Bangladeshi and Indian dishes for calorie estimation from food photos. Integrates a third-party AI API for personalized diet plans and a doctor-finder feature.</p>
-                <a href="https://github.com/MD-SAZID-HOSSAIN/Smart-Health-Companion" target="_blank" class="btn btn-outline-primary mt-auto align-self-start"><i class="bi bi-github"></i> View Code</a>
-              </div>
+          <div class="friend reveal">
+            <blockquote>A great friend and <span class="accent">coding partner</span>. We've worked on several projects together and always push each other to learn more.</blockquote>
+            <div class="friend__foot">
+              <cite>Mahin Chowdhury</cite>
+              <p class="friend__role">CSE student, UAP</p>
+              <a class="link" href="https://mahinchowdhury25.github.io/Portfolio/" target="_blank" rel="noopener">
+                Portfolio
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h7v7M13 3 3.5 12.5"/></svg>
+              </a>
             </div>
           </div>
 
-          <!-- Project 2 -->
-          <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
-            <div class="card w-100 shadow-sm border-0">
-              <div class="card-body d-flex flex-column p-4">
-                <h3 class="card-title mb-3 fw-bold" style="font-size: 1.25rem;">Bangladeshi Food Classifier</h3>
-                <h6 class="card-subtitle mb-3 text-primary">Python, PyTorch, EfficientNet-B0</h6>
-                <p class="card-text flex-grow-1" style="font-size: 0.95rem;">The vision model behind Smart Health Companion's food calorie feature. Fine-tuned an EfficientNet-B0 on a custom merged dataset of Indian and Bangladeshi dishes (16 classes). Reached 77.7% validation accuracy, effectively handling visually distinct dishes.</p>
-                <a href="https://www.kaggle.com/code/sazidhossain27/bangladeshi-food-classifier" target="_blank" class="btn btn-outline-primary mt-auto align-self-start"><i class="bi bi-link-45deg"></i> View on Kaggle</a>
-              </div>
+
+          <div class="friend reveal" data-delay="160">
+            <blockquote>A dedicated <span class="accent">study partner</span> and friend. We've helped each other through many challenging courses.</blockquote>
+            <div class="friend__foot">
+              <cite>Sadik Hasnat</cite>
+              <p class="friend__role">CSE student, UAP</p>
+              <a class="link" href="https://sadikhasnat.github.io/SADIKHASNAT/" target="_blank" rel="noopener">
+                Portfolio
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h7v7M13 3 3.5 12.5"/></svg>
+              </a>
             </div>
           </div>
 
-          <!-- Project 3 -->
-          <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
-            <div class="card w-100 shadow-sm border-0">
-              <div class="card-body d-flex flex-column p-4">
-                <h3 class="card-title mb-3 fw-bold" style="font-size: 1.25rem;">Brain Tumor Segmentation</h3>
-                <h6 class="card-subtitle mb-3 text-primary">Python, PyTorch, U-Net, ResNet-34</h6>
-                <p class="card-text flex-grow-1" style="font-size: 0.95rem;">A U-Net model trained to segment brain tumors from MRI scans and evaluated on a cross-dataset (Figshare) to measure generalization. Reached 0.918 validation Dice on FLAIR MRI slices. Conducted detailed failure analysis on domain shifts between MRI scan types.</p>
-                <a href="https://www.kaggle.com/code/sazidhossain27/brain-tumors" target="_blank" class="btn btn-outline-primary mt-auto align-self-start"><i class="bi bi-link-45deg"></i> View on Kaggle</a>
-              </div>
+          <div class="friend reveal" data-delay="240">
+            <blockquote>Great teammate in group projects. Always brings <span class="accent">innovative ideas</span> to the table.</blockquote>
+            <div class="friend__foot">
+              <cite>Sabrina Sultana</cite>
+              <p class="friend__role">CSE student, UAP</p>
+              <a class="link" href="https://sabrina1806.github.io/" target="_blank" rel="noopener">
+                Portfolio
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h7v7M13 3 3.5 12.5"/></svg>
+              </a>
             </div>
           </div>
 
-          <!-- Project 4 -->
-          <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
-            <div class="card w-100 shadow-sm border-0">
-              <div class="card-body d-flex flex-column p-4">
-                <h3 class="card-title mb-3 fw-bold" style="font-size: 1.25rem;">Zero-Shot Image Classification</h3>
-                <h6 class="card-subtitle mb-3 text-primary">Python, PyTorch, Hugging Face (CLIP)</h6>
-                <p class="card-text flex-grow-1" style="font-size: 0.95rem;">A benchmark comparing OpenAI's zero-shot CLIP against a conventionally fine-tuned ResNet18 across three datasets. Explored prompt engineering and analyzed when a general web imagery model outperforms a supervised model on specific domains.</p>
-                <a href="https://www.kaggle.com/code/sazidhossain27/zero-shot-image-classification-with-clip" target="_blank" class="btn btn-outline-primary mt-auto align-self-start"><i class="bi bi-link-45deg"></i> View on Kaggle</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 5 -->
-          <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="500">
-            <div class="card w-100 shadow-sm border-0">
-              <div class="card-body d-flex flex-column p-4">
-                <h3 class="card-title mb-3 fw-bold" style="font-size: 1.25rem;">Homemade Cake Bakery</h3>
-                <h6 class="card-subtitle mb-3 text-primary">Python, Django, SQLite, Pillow</h6>
-                <p class="card-text flex-grow-1" style="font-size: 0.95rem;">A production-style Django site for a home bakery business. Features custom models for cakes, categories, reviews, and gift boxes. Includes an interactive menu gallery and a fully functional Django admin dashboard for owner management.</p>
-                <a href="https://github.com/MD-SAZID-HOSSAIN/website-for-my-bakery" target="_blank" class="btn btn-outline-primary mt-auto align-self-start"><i class="bi bi-github"></i> View Code</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 6 -->
-          <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="600">
-            <div class="card w-100 shadow-sm border-0">
-              <div class="card-body d-flex flex-column p-4">
-                <h3 class="card-title mb-3 fw-bold" style="font-size: 1.25rem;">Cyber Security Club UAP Website</h3>
-                <h6 class="card-subtitle mb-3 text-primary">Python, Django, HTML, CSS</h6>
-                <p class="card-text flex-grow-1" style="font-size: 0.95rem;">The official website for the Cyber Security Club at CSE, University of Asia Pacific. Built to present club activities, announcements, and resources to students and members efficiently.</p>
-                <a href="https://github.com/MD-SAZID-HOSSAIN/CyberSecuritysite" target="_blank" class="btn btn-outline-primary mt-auto align-self-start"><i class="bi bi-github"></i> View Code</a>
-              </div>
+          <div class="friend reveal" data-delay="320">
+            <blockquote>Excellent collaboration partner in <span class="accent">robotic projects</span>. Always eager to learn and share knowledge.</blockquote>
+            <div class="friend__foot">
+              <cite>Araf</cite>
+              <p class="friend__role">CSE student, UAP</p>
+              <a class="link" href="https://mohd-araf.github.io/Araf_Portfolio/" target="_blank" rel="noopener">
+                Portfolio
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h7v7M13 3 3.5 12.5"/></svg>
+              </a>
             </div>
           </div>
 
         </div>
       </div>
-
-    </section><!-- /Projects Section -->
-
-    <!-- Hobbies Section -->
-    <section id="hobbies" class="hobbies section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-          <h2>Hobbies</h2>
-          <p>Things I enjoy in my free time</p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4 justify-content-center">
-              
-              <!-- Hobby 1 -->
-              <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="card w-100 shadow-sm border-0 text-center overflow-hidden" style="transition: transform 0.3s; border-radius: 12px;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                      <img src="assets/img/testimonials/asgame.png" alt="Assassin's Creed Game" class="card-img-top" style="height: 200px; object-fit: cover;">
-                      <div class="card-body">
-                          <h4 class="card-title fw-bold mt-2" style="color: #2c3e50;">Gaming</h4>
-                      </div>
-                  </div>
-              </div>
-
-              <!-- Hobby 2 -->
-              <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
-                  <div class="card w-100 shadow-sm border-0 text-center overflow-hidden" style="transition: transform 0.3s; border-radius: 12px;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                      <img src="assets/img/testimonials/horrormovie2.jpg" alt="The Conjuring" class="card-img-top" style="height: 200px; object-fit: cover;">
-                      <div class="card-body">
-                          <h4 class="card-title fw-bold mt-2" style="color: #2c3e50;">Horror Movies</h4>
-                      </div>
-                  </div>
-              </div>
-
-              <!-- Hobby 3 -->
-              <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
-                  <div class="card w-100 shadow-sm border-0 text-center overflow-hidden" style="transition: transform 0.3s; border-radius: 12px;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                      <img src="assets/img/testimonials/traveling.jpg" alt="Traveling" class="card-img-top" style="height: 200px; object-fit: cover;">
-                      <div class="card-body">
-                          <h4 class="card-title fw-bold mt-2" style="color: #2c3e50;">Traveling</h4>
-                      </div>
-                  </div>
-              </div>
-
-              <!-- Hobby 4 -->
-              <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
-                  <div class="card w-100 shadow-sm border-0 text-center overflow-hidden" style="transition: transform 0.3s; border-radius: 12px;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                      <img src="assets/img/testimonials/upmovie.jpeg" alt="UP Movie" class="card-img-top" style="height: 200px; object-fit: cover;">
-                      <div class="card-body">
-                          <h4 class="card-title fw-bold mt-2" style="color: #2c3e50;">Animation Movies</h4>
-                      </div>
-                  </div>
-              </div>
-
-          </div>
-      </div>
-  </section>
-    <!-- Friends Section -->
-    <section id="testimonials" class="testimonials section light-background">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Friends</h2>
-            <p>My Closest Friends</p>
-        </div>
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="swiper init-swiper">
-                <script type="application/json" class="swiper-config">
-                    {
-                        "loop": true,
-                        "speed": 600,
-                        "autoplay": {
-                            "delay": 5000
-                        },
-                        "slidesPerView": "auto",
-                        "pagination": {
-                            "el": ".swiper-pagination",
-                            "type": "bullets",
-                            "clickable": true
-                        },
-                        "breakpoints": {
-                            "320": {
-                                "slidesPerView": 1,
-                                "spaceBetween": 40
-                            },
-                            "1200": {
-                                "slidesPerView": 3,
-                                "spaceBetween": 1
-                            }
-                        }
-                    }
-                </script>
-                <div class="swiper-wrapper">
-                    <!-- Friend 1 -->
-                    <div class="swiper-slide p-3">
-                        <div class="card shadow-sm border-0 h-100 p-4 text-center" style="border-radius: 12px;">
-                            <i class="bi bi-quote text-primary-subtle" style="font-size: 3rem; line-height: 1; margin-bottom: -15px;"></i>
-                            <p class="fst-italic mb-4 mt-2">
-                                "A great friend and coding partner. We've worked on several projects together and always push each other to learn more."
-                            </p>
-                            <h4 class="fw-bold mb-1" style="color: #2c3e50;">Mahin Chowdhury</h4>
-                            <h6 class="text-primary mb-2">CSE Student</h6>
-                            <p class="text-muted small mb-3"><i class="bi bi-building me-1"></i>University of Asia Pacific</p>
-                            <a href="https://mahinchowdhury25.github.io/Portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm rounded-pill mt-auto mx-auto px-4"><i class="bi bi-globe me-2"></i> Portfolio</a>
-                        </div>
-                    </div>
-
-                    <!-- Friend 2 -->
-                    <div class="swiper-slide p-3">
-                        <div class="card shadow-sm border-0 h-100 p-4 text-center" style="border-radius: 12px;">
-                            <i class="bi bi-quote text-primary-subtle" style="font-size: 3rem; line-height: 1; margin-bottom: -15px;"></i>
-                            <p class="fst-italic mb-4 mt-2">
-                                "We've participated in many CTF competitions together. He is a great friend. Always reliable and great at problem-solving."
-                            </p>
-                            <h4 class="fw-bold mb-1" style="color: #2c3e50;">Arman Alvi</h4>
-                            <h6 class="text-primary mb-2">CSE Student</h6>
-                            <p class="text-muted small mb-3"><i class="bi bi-building me-1"></i>University of Asia Pacific</p>
-                            <a href="https://alvi2356.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm rounded-pill mt-auto mx-auto px-4"><i class="bi bi-globe me-2"></i> Portfolio</a>
-                        </div>
-                    </div>
-
-                    <!-- Friend 3 -->
-                    <div class="swiper-slide p-3">
-                        <div class="card shadow-sm border-0 h-100 p-4 text-center" style="border-radius: 12px;">
-                            <i class="bi bi-quote text-primary-subtle" style="font-size: 3rem; line-height: 1; margin-bottom: -15px;"></i>
-                            <p class="fst-italic mb-4 mt-2">
-                                "A dedicated study partner and friend. We've helped each other through many challenging courses."
-                            </p>
-                            <h4 class="fw-bold mb-1" style="color: #2c3e50;">Sadik Hasnat</h4>
-                            <h6 class="text-primary mb-2">CSE Student</h6>
-                            <p class="text-muted small mb-3"><i class="bi bi-building me-1"></i>University of Asia Pacific</p>
-                            <a href="https://sadikhasnat.github.io/SADIKHASNAT/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm rounded-pill mt-auto mx-auto px-4"><i class="bi bi-globe me-2"></i> Portfolio</a>
-                        </div>
-                    </div>
-
-                    <!-- Friend 4 -->
-                    <div class="swiper-slide p-3">
-                        <div class="card shadow-sm border-0 h-100 p-4 text-center" style="border-radius: 12px;">
-                            <i class="bi bi-quote text-primary-subtle" style="font-size: 3rem; line-height: 1; margin-bottom: -15px;"></i>
-                            <p class="fst-italic mb-4 mt-2">
-                                "Great teammate in group projects. Always brings innovative ideas to the table."
-                            </p>
-                            <h4 class="fw-bold mb-1" style="color: #2c3e50;">Sabrina Sultana</h4>
-                            <h6 class="text-primary mb-2">CSE Student</h6>
-                            <p class="text-muted small mb-3"><i class="bi bi-building me-1"></i>University of Asia Pacific</p>
-                            <a href="https://sabrina1806.github.io/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm rounded-pill mt-auto mx-auto px-4"><i class="bi bi-globe me-2"></i> Portfolio</a>
-                        </div>
-                    </div>
-
-                    <!-- Friend 5 -->
-                    <div class="swiper-slide p-3">
-                        <div class="card shadow-sm border-0 h-100 p-4 text-center" style="border-radius: 12px;">
-                            <i class="bi bi-quote text-primary-subtle" style="font-size: 3rem; line-height: 1; margin-bottom: -15px;"></i>
-                            <p class="fst-italic mb-4 mt-2">
-                                "Excellent collaboration partner in cybersecurity projects. Always eager to learn and share knowledge."
-                            </p>
-                            <h4 class="fw-bold mb-1" style="color: #2c3e50;">Araf</h4>
-                            <h6 class="text-primary mb-2">CSE Student</h6>
-                            <p class="text-muted small mb-3"><i class="bi bi-building me-1"></i>University of Asia Pacific</p>
-                            <a href="https://mohd-araf.github.io/Araf_Portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm rounded-pill mt-auto mx-auto px-4"><i class="bi bi-globe me-2"></i> Portfolio</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section light-background">
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <canvas class="contact__particles" aria-hidden="true"></canvas>
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's <span class="accent">talk</span></h2>
+          <p>Open to <span class="accent">internships, research collaborations</span> and project work. I read everything that comes in.</p>
+        </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Feel free to reach out to me!</p>
-      </div><!-- End Section Title -->
+        <div class="contact__grid">
 
-      <div class="container">
+          <div class="reveal">
+            <ul class="contact__list">
+              <li>
+                <span class="k">Email</span>
+                <a class="v" href="mailto:mdsazidhossain27@gmail.com">mdsazidhossain27@gmail.com</a>
+              </li>
+              <li>
+                <span class="k">WhatsApp</span>
+                <a class="v" href="https://wa.me/8801752949254" target="_blank" rel="noopener">+880 1752 949254</a>
+              </li>
+              <li>
+                <span class="k">Location</span>
+                <span class="v">Adabor, Mohammadpur, Dhaka</span>
+              </li>
+            </ul>
 
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>Adabo, Mohammadpur, Dhaka, Bangladesh</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Phone</h3>
-                  <p>01752949254</p>
-                  <a href="https://wa.me/8801752949254" target="_blank" class="whatsapp-link">
-                    <i class="bi bi-whatsapp"></i> WhatsApp
-                  </a>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email</h3>
-                  <p>
-                    <a href="mailto:mdsazidhossain27@gmail.com" class="email-link">
-                      <i class="bi bi-envelope-fill"></i> mdsazidhossain27@gmail.com
-                    </a>
-                  </p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.5375391157!2d90.35577687506827!3d23.766073978673725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c09f9ba3d447%3A0x1babce9f1c6c95a3!2sMohammadpur%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1709997408099!5m2!1sen!2sbd" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="contact__social">
+              <a href="https://github.com/MD-SAZID-HOSSAIN" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/md-sazid-hossain-905543372/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 1.15C0 .52.53 0 1.18 0h13.64C15.47 0 16 .52 16 1.15v13.7c0 .63-.53 1.15-1.18 1.15H1.18C.53 16 0 15.48 0 14.85V1.15Zm4.94 12.26V6.17H2.54v7.24h2.4Zm-1.2-8.23c.84 0 1.36-.55 1.36-1.24-.02-.71-.52-1.25-1.34-1.25-.82 0-1.36.54-1.36 1.25 0 .69.52 1.24 1.32 1.24h.02Zm4.42 8.23V9.37c0-.22.02-.43.08-.59.17-.43.56-.88 1.22-.88.86 0 1.2.66 1.2 1.62v3.89h2.4V9.24c0-2.22-1.18-3.25-2.76-3.25-1.29 0-1.86.71-2.18 1.2v.03h-.02l.02-.03V6.17h-2.4c.03.68 0 7.24 0 7.24h2.4Z"/></svg>
+              </a>
+              <a href="https://www.facebook.com/sazid.hossain.923171" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M16 8.05a8 8 0 1 0-9.25 7.9v-5.6H4.72V8.05h2.03V6.3c0-2 1.2-3.11 3.02-3.11.87 0 1.79.16 1.79.16v1.97h-1.01c-.99 0-1.3.62-1.3 1.25v1.5h2.22l-.36 2.3H9.25v5.6A8 8 0 0 0 16 8.05Z"/></svg>
+              </a>
             </div>
           </div>
 
-          <div class="col-lg-7">
-            <form action="https://formsubmit.co/sazid202027@gmail.com" method="POST" class="p-4 p-md-5 shadow-sm bg-white" data-aos="fade-up" data-aos-delay="200" style="border-radius: 12px;">
-              <!-- FormSubmit Options -->
-              <input type="hidden" name="_subject" value="New message from your portfolio website!">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_template" value="table">
-              
-              <div class="row gy-4">
+          <form class="form reveal" data-delay="120" action="https://formsubmit.co/sazid202027@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New message from your portfolio website">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
 
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2 fw-medium text-secondary">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" style="padding: 12px 15px; border-radius: 8px;" required>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2 fw-medium text-secondary">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" style="padding: 12px 15px; border-radius: 8px;" required>
-                </div>
-
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2 fw-medium text-secondary">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" style="padding: 12px 15px; border-radius: 8px;" required>
-                </div>
-
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2 fw-medium text-secondary">Message</label>
-                  <textarea class="form-control" name="message" rows="6" id="message-field" style="padding: 12px 15px; border-radius: 8px;" required></textarea>
-                </div>
-
-                <div class="col-md-12 text-center mt-4">
-                  <button type="submit" class="btn btn-primary rounded-pill px-5 py-3 fw-bold shadow-sm" style="transition: 0.3s; background-color: var(--accent-color, #149ddd); border-color: var(--accent-color, #149ddd);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Send Message <i class="bi bi-send ms-2"></i></button>
-                </div>
-
+            <div class="form__row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
               </div>
-            </form>
-          </div><!-- End Contact Form -->
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" required>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+
+            <button class="btn btn--solid" type="submit">
+              Send message
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+            </button>
+          </form>
 
         </div>
-
       </div>
-
-    </section><!-- /Contact Section -->
-
+    </section>
 
   </main>
 
-
+  <footer class="footer">
+    <div class="shell footer__inner">
+      <p>&copy; <span id="year">2026</span> Md. Sazid Hossain</p>
+      <p>Made by Sazid— <a href="https://github.com/MD-SAZID-HOSSAIN" target="_blank" rel="noopener">source on GitHub</a></p>
+    </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a class="totop" href="#top" aria-label="Back to top">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4"/></svg>
+  </a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
 </body>
 
